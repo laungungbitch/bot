@@ -62,7 +62,7 @@ async def filter(client: Bot, message: Message):
                 [InlineKeyboardButton(text="📃 Pages 1/1",callback_data="pages")]
             )
             await message.reply_text(
-                f"<b> Kết quả tìm kiếm cho từ khóa {message.text}</b>",
+                f"<b> Kết quả tìm kiếm cho từ khóa: {message.text}</b>",
                 reply_markup=InlineKeyboardMarkup(buttons)
             )
             return
@@ -78,7 +78,7 @@ async def filter(client: Bot, message: Message):
         )
 
         await message.reply_text(
-                f"<b> Kết quả tìm kiếm cho từ khóa {message.text}</b>",
+                f"<b> Kết quả tìm kiếm cho từ khóa: {message.text}</b>",
                 reply_markup=InlineKeyboardMarkup(buttons)
             )    
 
