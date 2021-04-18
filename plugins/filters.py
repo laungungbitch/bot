@@ -78,7 +78,7 @@ async def filter(client: Bot, message: Message):
         )
 
         await message.reply_text(
-                f"<b> Kết quả tìm kiếm cho từ khóa: {message.text}</b>",
+                f"<b> Kết quả tìm kiếm cho từ khóa: {message.text}</b> <b> Join vào Channel trước mới xem được nhé[Channel Phim](https://t.me/joinchat/14ryQxopAhliMzQ1)</b>",
                 reply_markup=InlineKeyboardMarkup(buttons)
             )    
 
