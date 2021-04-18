@@ -104,10 +104,6 @@ async def cb_handler(client: Bot, query: CallbackQuery):
                 buttons.append(
                     [InlineKeyboardButton(f"📃 Pages {int(index)+2}/{data['total']}", callback_data="pages")]
                 )
-    buttons.append(
-                    [InlineKeyboardButton(text="Join channel Phim",
-                                url="https://t.me/joinchat/14ryQxopAhliMzQ",)]
-                )
                 await query.edit_message_reply_markup( 
                     reply_markup=InlineKeyboardMarkup(buttons)
                 )
