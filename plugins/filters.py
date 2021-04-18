@@ -78,7 +78,8 @@ async def filter(client: Bot, message: Message):
         )
 
         await message.reply_text(
-                f"<b> Kết quả tìm kiếm cho từ khóa: {message.text}</b> <b> Join vào Channel trước mới xem được nhé[Channel Phim](https://t.me/joinchat/14ryQxopAhliMzQ1)</b>",
+                f"<b> Kết quả tìm kiếm cho từ khóa: {message.text}</b> 
+            <b>Join vào Channel trước mới xem được nhé</b>",
                 reply_markup=InlineKeyboardMarkup(buttons)
             )    
 
@@ -104,7 +105,10 @@ async def cb_handler(client: Bot, query: CallbackQuery):
                 buttons.append(
                     [InlineKeyboardButton(f"📃 Pages {int(index)+2}/{data['total']}", callback_data="pages")]
                 )
-
+    buttons.append(
+                    [InlineKeyboardButton(text="Join channel Phim",
+                                url="https://t.me/joinchat/14ryQxopAhliMzQ",)]
+                )
                 await query.edit_message_reply_markup( 
                     reply_markup=InlineKeyboardMarkup(buttons)
                 )
